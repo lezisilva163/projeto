@@ -12,6 +12,9 @@
 */
 
 Route::get('/', 'adminController@index');
+Route::get('/clients/edit', 'ClientsController@edit');
 Route::get('/clients/cadastrar', 'ClientsController@index')->name('clients_create');
 Route::post('/clients/store', 'ClientsController@store');
 Route::get('/clients', 'ClientsController@show');
+Route::get('/clients/update', 'ClientsController@update');
+Route::get('/clients/delete', 'ClientsController@destroy');

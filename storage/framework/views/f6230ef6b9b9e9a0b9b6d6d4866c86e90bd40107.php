@@ -1,15 +1,14 @@
-@extends('dashboard')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 <div class="card">
 	<div class="container">
 		<div class="card card-plain">
 			<div class="col-md-12">
 				<div class="card-header card-header-success">
-		            <h4 class="card-title mt-0">Cadastrar cliente</h4>
+		            <h4 class="card-title mt-0">Atualizar cliente</h4>
 		        </div>
-				<form class="form-horizontal" action="{{ url('/clients/store') }}" method="POST">
-					{{ csrf_field() }}
+				<form class="form-horizontal" action="<?php echo e(url('/clients/update/{$client->id}')); ?>" method="POST">
+					<?php echo e(csrf_field()); ?>
+
 					<div class="form-group">
 				    	<label class="col-sm-2 control-label"></label>
 				    	<div class="col-sm-10">
@@ -44,7 +43,7 @@
 			        <div class="help-block with-errors"></div>
 			        </div>
 					<div class="card-footer">
-						<button class="btn btn-sm btn-success" type="submit">Cadastrar</button>
+						<button class="btn btn-sm btn-success" type="submit">Atualizar</button>
 					</div>
 				</form>
 			</div>
@@ -53,4 +52,5 @@
 </div>
 
 
-	@endsection
+	<?php $__env->stopSection(); ?>
+<?php echo $__env->make('dashboard', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\cancha\resources\views/editar.blade.php ENDPATH**/ ?>

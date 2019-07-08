@@ -6,9 +6,9 @@
 		<div class="card card-plain">
 			<div class="col-md-12">
 				<div class="card-header card-header-success">
-		            <h4 class="card-title mt-0">Cadastrar cliente</h4>
+		            <h4 class="card-title mt-0">Atualizar cliente</h4>
 		        </div>
-				<form class="form-horizontal" action="{{ url('/clients/store') }}" method="POST">
+				<form class="form-horizontal" action="{{ url('/clients/update/{$client->id}') }}" method="POST">
 					{{ csrf_field() }}
 					<div class="form-group">
 				    	<label class="col-sm-2 control-label"></label>
@@ -44,7 +44,7 @@
 			        <div class="help-block with-errors"></div>
 			        </div>
 					<div class="card-footer">
-						<button class="btn btn-sm btn-success" type="submit">Cadastrar</button>
+						<button class="btn btn-sm btn-success" type="submit">Atualizar</button>
 					</div>
 				</form>
 			</div>
